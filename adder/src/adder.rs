@@ -1,10 +1,10 @@
 #![no_std]
 
-dharitri_sc::imports!();
+dharitri_wasm::imports!();
 
 /// One of the simplest smart contracts possible,
 /// it holds a single variable in storage, which anyone can increment.
-#[dharitri_sc::contract]
+#[dharitri_wasm::contract]
 pub trait Adder {
     #[view(getSum)]
     #[storage_mapper("sum")]
@@ -15,13 +15,7 @@ pub trait Adder {
         self.sum().set(initial_value);
     }
 
-    #[endpoint]
-    fn upgrade(&self, new_value: BigUint) {
-        self.sum().set(new_value);
-    }
-
     /// Add desired amount to the storage variable.
-    #[payable("*")]
     #[endpoint]
     fn add(&self, value: BigUint) {
         self.sum().update(|sum| *sum += value);
