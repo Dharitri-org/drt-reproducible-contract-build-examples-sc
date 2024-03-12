@@ -3,21 +3,6 @@
 version = 3
 
 [[package]]
-name = "adder"
-version = "0.0.0"
-dependencies = [
- "dharitri-sc",
-]
-
-[[package]]
-name = "adder-wasm"
-version = "0.0.0"
-dependencies = [
- "adder",
- "dharitri-sc-wasm-adapter",
-]
-
-[[package]]
 name = "ahash"
 version = "0.8.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -86,6 +71,21 @@ name = "hex-literal"
 version = "0.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6fe2267d4ed49bc07b63801559be28c718ea06c4738b7a03c94df7386d2cde46"
+
+[[package]]
+name = "lottery-dct"
+version = "0.0.0"
+dependencies = [
+ "dharitri-sc",
+]
+
+[[package]]
+name = "lottery-dct-wasm"
+version = "0.0.0"
+dependencies = [
+ "lottery-dct",
+ "dharitri-sc-wasm-adapter",
+]
 
 [[package]]
 name = "dharitri-sc"
@@ -171,9 +171,9 @@ checksum = "dd8b5dd2ae5ed71462c540258bedcb51965123ad7e7ccf4b9a8cafaa4a63576d"
 
 [[package]]
 name = "proc-macro2"
-version = "1.0.74"
+version = "1.0.67"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2de98502f212cfcea8d0bb305bd0f49d7ebdd75b64ba0a68f937d888f4e0d6db"
+checksum = "3d433d9f1a3e8c1263d9456598b16fec66f4acc9a74dacffd35c7bb09b3a1328"
 dependencies = [
  "unicode-ident",
 ]
@@ -216,9 +216,9 @@ dependencies = [
 
 [[package]]
 name = "unicode-ident"
-version = "1.0.11"
+version = "1.0.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "301abaae475aa91687eb82514b328ab47a211a533026cb25fc3e519b86adfc3c"
+checksum = "3354b9ac3fae1ff6755cb6db53683adb661634f67557942dea4facebec0fee4b"
 
 [[package]]
 name = "version_check"

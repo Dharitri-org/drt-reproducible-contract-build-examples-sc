@@ -3,21 +3,6 @@
 version = 3
 
 [[package]]
-name = "adder"
-version = "0.0.0"
-dependencies = [
- "dharitri-sc",
-]
-
-[[package]]
-name = "adder-wasm"
-version = "0.0.0"
-dependencies = [
- "adder",
- "dharitri-sc-wasm-adapter",
-]
-
-[[package]]
 name = "ahash"
 version = "0.8.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -88,6 +73,22 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6fe2267d4ed49bc07b63801559be28c718ea06c4738b7a03c94df7386d2cde46"
 
 [[package]]
+name = "multisig"
+version = "0.0.0"
+dependencies = [
+ "dharitri-sc",
+ "dharitri-sc-modules",
+]
+
+[[package]]
+name = "multisig-full-wasm"
+version = "0.0.0"
+dependencies = [
+ "multisig",
+ "dharitri-sc-wasm-adapter",
+]
+
+[[package]]
 name = "dharitri-sc"
 version = "0.13.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -134,6 +135,15 @@ dependencies = [
  "quote",
  "radix_trie",
  "syn",
+]
+
+[[package]]
+name = "dharitri-sc-modules"
+version = "0.13.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a5833f8bc88104357d38a8952d2a16c3e66080e2e512c0e7001c0c003006c475"
+dependencies = [
+ "dharitri-sc",
 ]
 
 [[package]]

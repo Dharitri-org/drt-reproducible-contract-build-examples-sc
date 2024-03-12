@@ -1,12 +1,12 @@
 [package]
-name = "adder"
+name = "lottery-dct"
 version = "0.0.0"
 authors = ["you"]
 edition = "2021"
 publish = false
 
 [lib]
-path = "src/adder.rs"
+path = "src/lottery.rs"
 
 [dependencies.dharitri-sc]
 version = "=0.13.4"

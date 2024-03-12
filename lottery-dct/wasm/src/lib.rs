@@ -5,9 +5,9 @@
 ////////////////////////////////////////////////////
 
 // Init:                                 1
-// Endpoints:                            3
+// Endpoints:                            7
 // Async Callback (empty):               1
-// Total number of exported functions:   5
+// Total number of exported functions:   9
 
 #![no_std]
 #![allow(internal_features)]
@@ -17,12 +17,16 @@ dharitri_sc_wasm_adapter::allocator!();
 dharitri_sc_wasm_adapter::panic_handler!();
 
 dharitri_sc_wasm_adapter::endpoints! {
-    adder
+    lottery_dct
     (
         init => init
-        getSum => sum
-        upgrade => upgrade
-        add => add
+        start => start
+        createLotteryPool => create_lottery_pool
+        buy_ticket => buy_ticket
+        determine_winner => determine_winner
+        status => status
+        getLotteryInfo => lottery_info
+        getLotteryWhitelist => lottery_whitelist
     )
 }
 
